@@ -1,3 +1,4 @@
+require 'pry'
 class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
@@ -5,6 +6,7 @@ class Shoe
   BRANDS = []
 
   def initialize(brand)
+    binding.pry
     @brand = brand
     BRANDS << brand
   end
@@ -14,9 +16,9 @@ class Shoe
     puts "Your shoe is as good as new!"
   end
 
-  def brand=(brand)
-    @brand = brand
-    BRANDS << brand
-  end #brand=
+  # def brand=(brand)
+  #   @brand = brand
+  #   BRANDS << brand
+  # end #brand=
 
 end
